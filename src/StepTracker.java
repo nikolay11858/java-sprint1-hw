@@ -89,7 +89,7 @@ public class StepTracker {
         for (int i = 0; i < stepsPerMonth.length; i++) {
             if (stepsPerMonth[i] >= goalSteps) {
                 countDay += 1;
-            } else if ((stepsPerMonth[i] < goalSteps) && (countDay > bestCountDay)) {
+            } else if (countDay > bestCountDay) {
                 bestCountDay = countDay;
                 countDay = 0;
             } else {

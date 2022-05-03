@@ -19,23 +19,19 @@ public class Main {
                 System.out.println("Какое количество шагов было пройдено?");
                 int countStep = scanner.nextInt();
                 stepTracker.saveCountStep(month, day, countStep);
-            }
-
-            if (command == 2) {
+            } else if (command == 2) {
                 System.out.println("За какой месяц вы хотите получить статистику?");
                 int month = scanner.nextInt();
                 stepTracker.showStaticPerMonth(month);
-            }
-
-            if (command == 3) {
+            } else if (command == 3) {
                 System.out.println("Какое количество шагов вы хотите поставить своей целью?");
                 int goalSteps = scanner.nextInt();
                 stepTracker.saveGoalSteps(goalSteps);
-            }
-
-            if (command == 0) {
+            } else if (command == 0) {
                 System.out.println("Выход");
                 break;
+            } else {
+                System.out.println("Вы выбрали несуществующее действие. Повторите выбор.");
             }
         }
 
